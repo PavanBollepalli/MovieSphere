@@ -18,9 +18,9 @@ const MovieCard = ({
           <div className="rating">
             <img src="star.svg" alt="star" />
             <p>{vote_average ? vote_average.toFixed(1) : "NA"}</p>
-            <span>.</span>
+            <span className="text-white">◦</span>
             <p className="lang">{original_language}</p>
-            <span>.</span>
+            <span className="text-white">◦</span>
             <p className="year">
               {release_date ? release_date.split("-")[0] : "N/A"}
             </p>
