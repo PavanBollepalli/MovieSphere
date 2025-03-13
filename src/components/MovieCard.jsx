@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
+import MovieBio from "./MovieBio";
 
-const MovieCard = ({
-  movie: { title, vote_average, poster_path, release_date, original_language },
-}) => {
+const MovieCard = ({ movie }) => {
+  const { title, vote_average, poster_path, release_date, original_language } =
+    movie;
+  const [showBio, setShowBio] = useState(false);
+
   return (
-    <div>
+    <div onClick={() => setShowBio(!showBio)}>
       <p className="movie-card">
         <img
           src={
@@ -26,6 +29,7 @@ const MovieCard = ({
             </p>
           </div>
         </div>
+        {showBio && <MovieBio movie={movie} />}
       </p>
     </div>
   );
