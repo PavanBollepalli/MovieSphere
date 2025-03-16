@@ -39,17 +39,15 @@ const MovieBio = () => {
   if (!movieDetails) return <div>No movie details available</div>;
 
   return (
-    <div>
-      <h1>
-        <span className="text-gradient">{movieDetails.title}</span>
-      </h1>
+    <div className="text-white m-4 font-mono movie-card">
+      <h2>{movieDetails.title}</h2>
 
-      <div className="flex text-white align-center justify-center">
+      <div className="flex text-white align-center justify-center ">
         {movieDetails.poster_path && (
           <img
             src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`}
             alt={movieDetails.title}
-            className="movie-poster m-2 p-4 w-128 h-128"
+            className="movie-poster  w-128 h-128"
           />
         )}
 
