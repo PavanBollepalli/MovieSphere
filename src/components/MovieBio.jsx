@@ -39,9 +39,9 @@ const MovieBio = () => {
 
   return (
     <div className="font-sans m-2 p-4 text-white movie-card shadow-md shadow-white">
-      <section className="flex items-center justify-between">
-        <div>
-          <h1>{movieDetails.title}</h1>
+      <section className="flex justify-between">
+        <div className="w-1/2">
+          <h3>{movieDetails.title}</h3>
           <div className="flex items-start gap-2">
             <p>
               {movieDetails.release_date
@@ -50,7 +50,22 @@ const MovieBio = () => {
             </p>
             <p>·</p>
             <p>{movieDetails.original_language}</p>
+            <img
+              src={
+                movieDetails.poster_path
+                  ? `https://image.tmdb.org/t/p/w500/${movieDetails.poster_path}`
+                  : "/no-movie.png"
+              }
+              alt="movie-poster"
+              className="w-75 h-90"
+            />
           </div>
+        </div>
+        <div className="flex items-end gap-2">
+          <div className="p-2 bg-gray-800 rounded-md">
+            <img src="../star.svg" alt="rating" />
+          </div>
+          <div></div>
         </div>
       </section>
       <section></section>
