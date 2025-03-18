@@ -38,10 +38,12 @@ const MovieBio = () => {
   if (!movieDetails) return <div>No movie details available</div>;
 
   return (
-    <div className="font-sans m-2 p-4 text-white movie-card shadow-md shadow-white">
+    <div className="font-sans m-2 p-4 text-white movie-card shadow-md shadow-white font-mono font-extrabold ">
+      {/* for the movie bio card which appears on the left side */}
+
+      <h2 className="text-violet-200">{movieDetails.title}</h2>
       <section className="flex justify-between">
         <div className="w-1/2">
-          <h3>{movieDetails.title}</h3>
           <div className="flex items-start gap-2">
             <p>
               {movieDetails.release_date
@@ -50,6 +52,8 @@ const MovieBio = () => {
             </p>
             <p>·</p>
             <p>{movieDetails.original_language}</p>
+          </div>
+          <div>
             <img
               src={
                 movieDetails.poster_path
@@ -57,13 +61,21 @@ const MovieBio = () => {
                   : "/no-movie.png"
               }
               alt="movie-poster"
-              className="w-75 h-90"
+              className="w-170 h-170 rounded-md mt-4"
             />
           </div>
         </div>
-        <div className="flex items-end gap-2">
-          <div className="p-2 bg-gray-800 rounded-md">
+        {/* for rendering the movie details on the other half of the webpage */}
+        <div className="w-1/2 m-8 ">
+          <h3 className="text-violet-300">Overview</h3>
+          <p className="">{movieDetails.overview}</p>
+          <div className="flex items-center gap-2">
+            <p>Rating:</p>
+            <p>{movieDetails.vote_average.toFixed(1)}</p>
+          </div>
+          <div className="w-10 h-10 flex gap-2 bg-gray-800 rounded-md p-2">
             <img src="../star.svg" alt="rating" />
+            <p>{movieDetails.vote_average.toFixed(1)}/10</p>
           </div>
           <div></div>
         </div>
