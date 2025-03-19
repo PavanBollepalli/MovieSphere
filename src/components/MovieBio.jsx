@@ -30,7 +30,6 @@ const MovieBio = () => {
       setLoading(false);
     }
   };
-
   useEffect(() => {
     movieData();
   }, [movie_id]);
