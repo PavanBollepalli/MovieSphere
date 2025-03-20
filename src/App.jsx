@@ -74,7 +74,7 @@ const App = () => {
   );
 
   return (
-    <main>
+    <main className="dark:bg-gray-800 dark:text-white ">
       <div className="pattern" />
       <div className="wrapper">
         <header>
