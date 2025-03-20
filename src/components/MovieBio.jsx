@@ -63,7 +63,7 @@ const MovieBio = () => {
   };
 
   return (
-    <div className="font-sans max-w-6xl mx-auto p-6 text-white dark:bg-blue-200">
+    <div className="font-sans max-w-6xl mx-auto p-6 text-white dark:bg-violet-200 dark:text-black">
       <Link
         to="/"
         className="flex items-center text-violet-300 hover:text-violet-100 mb-6 transition-colors"
