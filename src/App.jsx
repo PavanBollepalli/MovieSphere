@@ -4,6 +4,7 @@ import Spinner from "./components/Spinner.jsx";
 import MovieCard from "./components/MovieCard.jsx";
 import { useDebounce } from "react-use";
 import { updateSearchCount, getTrendingMovies } from "./appwrite.js";
+import ChatBot from "./components/ChatBot.jsx";
 const API_BASE_URL = "https://api.themoviedb.org/3";
 const API_KEY = import.meta.env.VITE_TMDB_API;
 const API_OPTIONS = {
@@ -114,6 +115,7 @@ const App = () => {
             </ul>
           )}
         </section>
+        <ChatBot></ChatBot>
       </div>
     </main>
   );
