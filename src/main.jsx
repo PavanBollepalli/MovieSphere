@@ -4,9 +4,11 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.jsx";
 import MovieBio from "./components/MovieBio.jsx";
+import PageNotFound from "./components/PageNotFound.jsx";
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
   { path: "/moviebio/:movie_id", element: <MovieBio /> },
+  { path: "*", element: <PageNotFound /> },
 ]);
 createRoot(document.getElementById("root")).render(
   <StrictMode>
