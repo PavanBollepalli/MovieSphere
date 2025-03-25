@@ -142,6 +142,8 @@
   }
 }
 
+/* Remove custom chat CSS as we're using Tailwind now */
+
 @utility text-gradient {
   @apply bg-linear-to-r from-[#D6C7FF] to-[#AB8BFF] bg-clip-text text-transparent;
 }
