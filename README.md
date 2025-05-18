@@ -85,14 +85,6 @@ This application integrates with the **TMDB API** to fetch real-time movie data.
    ```
 3. The application will use this key to dynamically fetch trending movies, search results, and detailed movie information.
 
-## Screenshots
-
-### Trending Movies Page
-![Trending Movies Page](https://via.placeholder.com/800x400?text=Trending+Movies+Page+Screenshot)
-
-### Movie Details Page
-![Movie Details](https://via.placeholder.com/800x400?text=Movie+Details+Screenshot)
-
 ## Deployment
 
 To deploy the application to a production environment:
