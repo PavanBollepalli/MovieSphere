@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { getGeminiResponse } from "../utils/geminiAPI";
-
+import { getAIResponse } from "../utils/openaiAPI";
 const ChatBox = ({ isOpen, onClose }) => {
   const [messages, setMessages] = useState([
     {
@@ -32,8 +31,8 @@ const ChatBox = ({ isOpen, onClose }) => {
     setIsLoading(true);
 
     try {
-      // Call Gemini API
-      const response = await getGeminiResponse(text);
+      // Call OpenAPI
+      const response = await getAIResponse(text);
 
       // Add AI response
       setMessages((prev) => [...prev, { text: response, isUser: false }]);
