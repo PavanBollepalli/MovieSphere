@@ -35,7 +35,7 @@ export const getAIResponse = async (message) => {
         // Send the request to the A4F API
         console.log("Sending request to A4F API...");
         const completion = await client.chat.completions.create({
-            model: "provider-5/gpt-4o",
+            model: "provider-3/gpt-4",
             messages: [
                 {
                     role: "system",
